@@ -1,1 +1,12 @@
 <p>Index</p>
+{% if name %}
+  <h1>Hi, {{ name }}!</h1>
+{% else %}
+  {{ name }}
+{% endif %}
+
+<form method="POST">
+  {{ form.name.label() }}
+  {{ form.name() }}
+  {{ form.submit() }}
+</form>
